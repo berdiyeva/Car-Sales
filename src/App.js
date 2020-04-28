@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useReducer} from 'react';
 
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
@@ -25,10 +25,12 @@ const App = () => {
 
   const removeFeature = item => {
     // dispatch an action here to remove an item
+    store.dispatch(removeFeature())
   };
 
   const buyItem = item => {
     // dipsatch an action here to add an item
+    store.dispatch(buyItem())
   };
 
   return (
